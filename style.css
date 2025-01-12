@@ -1,0 +1,247 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Dosis:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box  ;
+    font-family: "Dosis", serif;
+    font-size: 20px;
+   
+    color: white;
+}
+body{
+    background-color: rgb(230, 229, 229);
+}
+:root{
+    -primary-color:"black";
+    -secondary-color:"green";
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.passwordGenBox{
+    height: 500px;
+    padding: 15px 15px;
+    width: 25%;
+    background-color: purple;
+    border-radius: 10px;
+}
+.generatedPass{
+    color: yellow ;
+ }
+
+ .password{
+    background-color: black;
+    border-radius: 10px;
+ }
+ .passwordLengthBox , .lengthdiv{
+    background-color: transparent;
+ }
+
+.password,.lengthdiv{
+    display: flex;
+    font-weight: 600;
+    justify-content: space-between;
+    padding: 10px;
+ 
+}
+.password-strength{
+    padding: 10px;
+    border: 2px solid yellow;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+.strength{
+    color: yellow;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border: 2px solid yellow ;
+ }
+
+
+
+#lengthSlider{
+    width: 100%;
+
+}
+
+/* .slider-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+} */
+
+.copyBtn{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    
+}
+.copyBtn i:hover{
+    color: yellow;
+}
+input[type="range"] {
+    -webkit-appearance: none; 
+    width: 100%; 
+    height: 12px;
+    background: black; 
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 15px; 
+    height: 15px; 
+    background: yellow; 
+    border-radius: 50%; 
+    box-shadow: 0 0 10px 5px rgba(226, 241, 13, 0.774); 
+    cursor: pointer;
+}
+
+.styled-checkbox-container {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Hide the default checkbox */
+.styled-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+/* Custom checkbox styling */
+.styled-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.custom-checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4caf50; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* Background color */
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Checkmark styling */
+.custom-checkmark::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    /* top: 2px; */
+    left: 4px;
+    bottom: 3px; 
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.2s ease;
+}
+
+/* When checkbox is checked */
+.styled-checkbox input:checked + .custom-checkmark {
+    background-color: #4caf50; /* Green when checked */
+    border-color: #4caf50;
+}
+
+.styled-checkbox input:checked + .custom-checkmark::after {
+    opacity: 1; /* Show the checkmark */
+}
+
+/* Hover effect */
+.styled-checkbox .custom-checkmark:hover {
+    border-color: #66bb6a; /* Change border color on hover */
+}
+
+.generatebutton , .passwordIndicate{
+    height: 50px ;
+    width: 100%;
+    /* border: 2px solid red; */
+    margin-top: 30px;
+    padding: 0px 10px;
+}
+.passwordIndicate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.stengthLight{
+    height: 20px;
+    width: 20px;
+    background-color:  red;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 5px rgba(253, 132, 132, 0.836); 
+    /* border: 3px solid rgba(253, 132, 132, 0.836); */
+
+}
+
+.btn{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    color: yellow;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+
+}
+.btn:hover{
+    background-color: yellow;
+    /* opacity: 5s; */
+    
+    color: black;
+    /* border: 2px solid yellow; */
+    transition: 1s;
+}
+
+@media only screen and (max-width: 600px) {
+    .passwordGenBox{
+        height: 100%;
+        width: 100%;
+        padding-top: 80px;
+    }
+  }
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .passwordGenBox{
+        height: 75%;
+        width: 75%;
+    }
+  }
+
+  
+@media only screen and (min-width: 769px) and (max-width: 1100px) {
+    .passwordGenBox{
+        height: 50%;
+        width: 50%;
+    }
+  }

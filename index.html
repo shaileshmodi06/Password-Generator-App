@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Password Generator</title>
+
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="passwordGenBox">
+            <div class="password">
+                <div class="generatedPass" id="generatedPass"></div>
+                <button class="copyBtn" onclick="onCopyClick()"><i class="fa-regular fa-copy"></i></button>
+            </div>
+
+            <div class="passwordLengthBox">
+                <div class="lengthdiv">
+                    <div class="lengthText">Password Length</div>
+                    <div class="lengthVal" id="lengthVal">5</div>
+                </div>
+                <input type="range"
+                    id="lengthSlider"
+                    min='0' 
+                    max="10"
+                    value="5"
+                    onchange="onRangeChange(this)"/> 
+            </div>
+
+            <div class="password-strength">
+                <div class="strength">Password Strength</div>
+                <div class="uppercase">
+                    <label for="uppercaseCheckBox" class="styled-checkbox">
+                        <input id="uppercaseCheckBox" type="checkbox" >
+                        <span class="custom-checkmark"></span>
+                        Include Uppercase Letters
+                    </label>
+                </div> 
+                <div class="lowerCase">
+                    <label for="lowercaseCheckBox" class="styled-checkbox">
+                        <input id="lowercaseCheckBox" type="checkbox">
+                        <span class="custom-checkmark"></span>
+                        Include lowercase Letters
+                    </label>
+                  
+                </div> 
+                <div class="numericNum">
+                    <label for="numericNumCheckBox" class="styled-checkbox">
+                        <input id="numericNumCheckBox" type="checkbox">
+                        <span class="custom-checkmark"></span>
+                        Include Numbers
+                    </label>
+                    
+                </div> 
+                <div class="symbol">
+                    <label for="symbolCheckBox" class="styled-checkbox">
+                        <input id="symbolCheckBox" type="checkbox">
+                        <span class="custom-checkmark"></span>
+                        Include Symbols
+                    </label>
+                    
+                </div> 
+
+            </div>
+
+            <div class="generatebutton">
+                <button 
+                    class="btn" 
+                    id="generatePassword" 
+                    onclick="onGeneratePasswordClick()">
+                    Generate Password
+                </button>
+            </div>
+
+            <div class="passwordIndicate">
+                <span style="font-weight: bold;">Password Strength</span>
+                <div class="stengthLight">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
